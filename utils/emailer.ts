@@ -4,7 +4,7 @@ import {user} from '../models/index';
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'service_provider_email',
+    user: 'gmail.com',
     pass: 'password'
   }
 });
@@ -17,7 +17,7 @@ export const emailer = (data)=>{
                 to: element.dataValues.email,
                 subject: 'Sending Email using Node.js[nodemailer]',
                 text: 'Your Appointment reminder'
-              };
+              };              
               let response = {}
               transporter.sendMail(mailOptions, async function(error, info){
                 if (error) {

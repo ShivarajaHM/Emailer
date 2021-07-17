@@ -1,6 +1,6 @@
-import TestNameDAO from '../dao/userDAO';
+import userDAO from '../dao/userDAO';
 
-const UserDAO = new TestNameDAO();
+const UserDAO = new userDAO();
 
 function userServices() {
 }
